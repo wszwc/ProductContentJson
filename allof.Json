@@ -1,0 +1,889 @@
+{
+    "if": {
+        "required": [
+            "shirt_size"
+        ],
+        "properties": {
+            "shirt_size": {
+                "items": {
+                    "required": [
+                        "size_system"
+                    ],
+                    "properties": {
+                        "size_system": {
+                            "enum": [
+                                "as1"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "allOf": [
+            {
+                "required": [
+                    "age_range_description"
+                ],
+                "properties": {
+                    "age_range_description": {
+                        "contains": {
+                            "required": [
+                                "value"
+                            ],
+                            "properties": {
+                                "value": {
+                                    "enum": [
+                                        "Big Kid",
+                                        "Little Kid",
+                                        "Toddler",
+                                        "Adolescente",
+                                        "Niño Chico",
+                                        "Niño (2-5 años)"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "required": [
+                    "target_gender"
+                ],
+                "properties": {
+                    "target_gender": {
+                        "contains": {
+                            "required": [
+                                "value"
+                            ],
+                            "properties": {
+                                "value": {
+                                    "enum": [
+                                        "unisex"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    "then": {
+        "properties": {
+            "shirt_size": {
+                "items": {
+                    "properties": {
+                        "size_class": {
+                            "enum": [
+                                "age",
+                                "numeric",
+                                "alpha"
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "else": {
+        "if": {
+            "required": [
+                "shirt_size"
+            ],
+            "properties": {
+                "shirt_size": {
+                    "items": {
+                        "required": [
+                            "size_system"
+                        ],
+                        "properties": {
+                            "size_system": {
+                                "enum": [
+                                    "as1"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "allOf": [
+                {
+                    "required": [
+                        "age_range_description"
+                    ],
+                    "properties": {
+                        "age_range_description": {
+                            "contains": {
+                                "required": [
+                                    "value"
+                                ],
+                                "properties": {
+                                    "value": {
+                                        "enum": [
+                                            "Big Kid",
+                                            "Little Kid",
+                                            "Toddler",
+                                            "Adolescente",
+                                            "Niño Chico",
+                                            "Niño (2-5 años)"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "required": [
+                        "target_gender"
+                    ],
+                    "properties": {
+                        "target_gender": {
+                            "contains": {
+                                "required": [
+                                    "value"
+                                ],
+                                "properties": {
+                                    "value": {
+                                        "enum": [
+                                            "female"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "then": {
+            "properties": {
+                "shirt_size": {
+                    "items": {
+                        "properties": {
+                            "size_class": {
+                                "enum": [
+                                    "age",
+                                    "numeric",
+                                    "alpha"
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "else": {
+            "if": {
+                "required": [
+                    "shirt_size"
+                ],
+                "properties": {
+                    "shirt_size": {
+                        "items": {
+                            "required": [
+                                "size_system"
+                            ],
+                            "properties": {
+                                "size_system": {
+                                    "enum": [
+                                        "as1"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                "allOf": [
+                    {
+                        "required": [
+                            "age_range_description"
+                        ],
+                        "properties": {
+                            "age_range_description": {
+                                "contains": {
+                                    "required": [
+                                        "value"
+                                    ],
+                                    "properties": {
+                                        "value": {
+                                            "enum": [
+                                                "Infant",
+                                                "Bebé"
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "required": [
+                            "target_gender"
+                        ],
+                        "properties": {
+                            "target_gender": {
+                                "contains": {
+                                    "required": [
+                                        "value"
+                                    ],
+                                    "properties": {
+                                        "value": {
+                                            "enum": [
+                                                "unisex"
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "then": {
+                "properties": {
+                    "shirt_size": {
+                        "items": {
+                            "properties": {
+                                "size_class": {
+                                    "enum": [
+                                        "age",
+                                        "alpha"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "else": {
+                "if": {
+                    "required": [
+                        "shirt_size"
+                    ],
+                    "properties": {
+                        "shirt_size": {
+                            "items": {
+                                "required": [
+                                    "size_system"
+                                ],
+                                "properties": {
+                                    "size_system": {
+                                        "enum": [
+                                            "as1"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "allOf": [
+                        {
+                            "required": [
+                                "age_range_description"
+                            ],
+                            "properties": {
+                                "age_range_description": {
+                                    "contains": {
+                                        "required": [
+                                            "value"
+                                        ],
+                                        "properties": {
+                                            "value": {
+                                                "enum": [
+                                                    "Adult",
+                                                    "Erwachsener",
+                                                    "Adulte",
+                                                    "Adulto",
+                                                    "Volwassene",
+                                                    "Dla dorosłych",
+                                                    "Vuxen"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "required": [
+                                "target_gender"
+                            ],
+                            "properties": {
+                                "target_gender": {
+                                    "contains": {
+                                        "required": [
+                                            "value"
+                                        ],
+                                        "properties": {
+                                            "value": {
+                                                "enum": [
+                                                    "unisex"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                "then": {
+                    "properties": {
+                        "shirt_size": {
+                            "items": {
+                                "properties": {
+                                    "size_class": {
+                                        "enum": [
+                                            "numeric",
+                                            "alpha"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "else": {
+                    "if": {
+                        "required": [
+                            "shirt_size"
+                        ],
+                        "properties": {
+                            "shirt_size": {
+                                "items": {
+                                    "required": [
+                                        "size_system"
+                                    ],
+                                    "properties": {
+                                        "size_system": {
+                                            "enum": [
+                                                "as1"
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "allOf": [
+                            {
+                                "required": [
+                                    "age_range_description"
+                                ],
+                                "properties": {
+                                    "age_range_description": {
+                                        "contains": {
+                                            "required": [
+                                                "value"
+                                            ],
+                                            "properties": {
+                                                "value": {
+                                                    "enum": [
+                                                        "Big Kid",
+                                                        "Little Kid",
+                                                        "Adolescente",
+                                                        "Niño Chico"
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "required": [
+                                    "target_gender"
+                                ],
+                                "properties": {
+                                    "target_gender": {
+                                        "contains": {
+                                            "required": [
+                                                "value"
+                                            ],
+                                            "properties": {
+                                                "value": {
+                                                    "enum": [
+                                                        "male"
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    "then": {
+                        "properties": {
+                            "shirt_size": {
+                                "items": {
+                                    "properties": {
+                                        "size_class": {
+                                            "enum": [
+                                                "age",
+                                                "numeric",
+                                                "neck",
+                                                "alpha",
+                                                "neck_sleeve"
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "else": {
+                        "if": {
+                            "required": [
+                                "shirt_size"
+                            ],
+                            "properties": {
+                                "shirt_size": {
+                                    "items": {
+                                        "required": [
+                                            "size_system"
+                                        ],
+                                        "properties": {
+                                            "size_system": {
+                                                "enum": [
+                                                    "as1"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "allOf": [
+                                {
+                                    "required": [
+                                        "age_range_description"
+                                    ],
+                                    "properties": {
+                                        "age_range_description": {
+                                            "contains": {
+                                                "required": [
+                                                    "value"
+                                                ],
+                                                "properties": {
+                                                    "value": {
+                                                        "enum": [
+                                                            "Adult",
+                                                            "Erwachsener",
+                                                            "Adulte",
+                                                            "Adulto",
+                                                            "Volwassene",
+                                                            "Dla dorosłych",
+                                                            "Vuxen"
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "required": [
+                                        "target_gender"
+                                    ],
+                                    "properties": {
+                                        "target_gender": {
+                                            "contains": {
+                                                "required": [
+                                                    "value"
+                                                ],
+                                                "properties": {
+                                                    "value": {
+                                                        "enum": [
+                                                            "female"
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "then": {
+                            "properties": {
+                                "shirt_size": {
+                                    "items": {
+                                        "properties": {
+                                            "size_class": {
+                                                "enum": [
+                                                    "numeric",
+                                                    "alpha"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "else": {
+                            "if": {
+                                "required": [
+                                    "shirt_size"
+                                ],
+                                "properties": {
+                                    "shirt_size": {
+                                        "items": {
+                                            "required": [
+                                                "size_system"
+                                            ],
+                                            "properties": {
+                                                "size_system": {
+                                                    "enum": [
+                                                        "as1"
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "allOf": [
+                                    {
+                                        "required": [
+                                            "age_range_description"
+                                        ],
+                                        "properties": {
+                                            "age_range_description": {
+                                                "contains": {
+                                                    "required": [
+                                                        "value"
+                                                    ],
+                                                    "properties": {
+                                                        "value": {
+                                                            "enum": [
+                                                                "Infant",
+                                                                "Bebé"
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "required": [
+                                            "target_gender"
+                                        ],
+                                        "properties": {
+                                            "target_gender": {
+                                                "contains": {
+                                                    "required": [
+                                                        "value"
+                                                    ],
+                                                    "properties": {
+                                                        "value": {
+                                                            "enum": [
+                                                                "male"
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            "then": {
+                                "properties": {
+                                    "shirt_size": {
+                                        "items": {
+                                            "properties": {
+                                                "size_class": {
+                                                    "enum": [
+                                                        "age",
+                                                        "alpha"
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "else": {
+                                "if": {
+                                    "required": [
+                                        "shirt_size"
+                                    ],
+                                    "properties": {
+                                        "shirt_size": {
+                                            "items": {
+                                                "required": [
+                                                    "size_system"
+                                                ],
+                                                "properties": {
+                                                    "size_system": {
+                                                        "enum": [
+                                                            "as1"
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "allOf": [
+                                        {
+                                            "required": [
+                                                "age_range_description"
+                                            ],
+                                            "properties": {
+                                                "age_range_description": {
+                                                    "contains": {
+                                                        "required": [
+                                                            "value"
+                                                        ],
+                                                        "properties": {
+                                                            "value": {
+                                                                "enum": [
+                                                                    "Infant",
+                                                                    "Bebé"
+                                                                ]
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "required": [
+                                                "target_gender"
+                                            ],
+                                            "properties": {
+                                                "target_gender": {
+                                                    "contains": {
+                                                        "required": [
+                                                            "value"
+                                                        ],
+                                                        "properties": {
+                                                            "value": {
+                                                                "enum": [
+                                                                    "female"
+                                                                ]
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                "then": {
+                                    "properties": {
+                                        "shirt_size": {
+                                            "items": {
+                                                "properties": {
+                                                    "size_class": {
+                                                        "enum": [
+                                                            "age",
+                                                            "alpha"
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "else": {
+                                    "if": {
+                                        "required": [
+                                            "shirt_size"
+                                        ],
+                                        "properties": {
+                                            "shirt_size": {
+                                                "items": {
+                                                    "required": [
+                                                        "size_system"
+                                                    ],
+                                                    "properties": {
+                                                        "size_system": {
+                                                            "enum": [
+                                                                "as1"
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "allOf": [
+                                            {
+                                                "required": [
+                                                    "age_range_description"
+                                                ],
+                                                "properties": {
+                                                    "age_range_description": {
+                                                        "contains": {
+                                                            "required": [
+                                                                "value"
+                                                            ],
+                                                            "properties": {
+                                                                "value": {
+                                                                    "enum": [
+                                                                        "Toddler",
+                                                                        "Niño (2-5 años)"
+                                                                    ]
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "required": [
+                                                    "target_gender"
+                                                ],
+                                                "properties": {
+                                                    "target_gender": {
+                                                        "contains": {
+                                                            "required": [
+                                                                "value"
+                                                            ],
+                                                            "properties": {
+                                                                "value": {
+                                                                    "enum": [
+                                                                        "male"
+                                                                    ]
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "then": {
+                                        "properties": {
+                                            "shirt_size": {
+                                                "items": {
+                                                    "properties": {
+                                                        "size_class": {
+                                                            "enum": [
+                                                                "age",
+                                                                "numeric",
+                                                                "alpha"
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "else": {
+                                        "if": {
+                                            "required": [
+                                                "shirt_size"
+                                            ],
+                                            "properties": {
+                                                "shirt_size": {
+                                                    "items": {
+                                                        "required": [
+                                                            "size_system"
+                                                        ],
+                                                        "properties": {
+                                                            "size_system": {
+                                                                "enum": [
+                                                                    "as1"
+                                                                ]
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "allOf": [
+                                                {
+                                                    "required": [
+                                                        "age_range_description"
+                                                    ],
+                                                    "properties": {
+                                                        "age_range_description": {
+                                                            "contains": {
+                                                                "required": [
+                                                                    "value"
+                                                                ],
+                                                                "properties": {
+                                                                    "value": {
+                                                                        "enum": [
+                                                                            "Adult",
+                                                                            "Adulto"
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "required": [
+                                                        "target_gender"
+                                                    ],
+                                                    "properties": {
+                                                        "target_gender": {
+                                                            "contains": {
+                                                                "required": [
+                                                                    "value"
+                                                                ],
+                                                                "properties": {
+                                                                    "value": {
+                                                                        "enum": [
+                                                                            "male"
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "then": {
+                                            "properties": {
+                                                "shirt_size": {
+                                                    "items": {
+                                                        "properties": {
+                                                            "size_class": {
+                                                                "enum": [
+                                                                    "neck",
+                                                                    "alpha",
+                                                                    "neck_sleeve"
+                                                                ]
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "else": {
+                                            "properties": {
+                                                "shirt_size": {
+                                                    "items": {
+                                                        "properties": {
+                                                            "size_class": {
+                                                                "enum": [
+                                                                    "alpha_jaspo",
+                                                                    "age",
+                                                                    "numeric_height",
+                                                                    "numeric",
+                                                                    "numeric_go",
+                                                                    "neck",
+                                                                    "alpha",
+                                                                    "neck_sleeve"
+                                                                ]
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
